@@ -9,13 +9,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { AlunosComponent } from './alunos/alunos.component';
 import { ProfessoresComponent } from './professores/professores.component';
+import { ModelComponent } from './model/model.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AlunosComponent,
-    ProfessoresComponent
+    ProfessoresComponent,
+    ModelComponent
   ],
   imports: [
     BrowserModule,
