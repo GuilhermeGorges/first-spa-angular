@@ -1,5 +1,6 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { student } from '../model/student';
 
 @Component({
   selector: 'spa-home',
