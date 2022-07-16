@@ -1,5 +1,5 @@
 import { ThrowStmt } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { student } from '../model/student';
 
 @Component({
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  value: number;
+  value!: number;
   showTable: boolean = false;
 
   studentList: student[] = [
