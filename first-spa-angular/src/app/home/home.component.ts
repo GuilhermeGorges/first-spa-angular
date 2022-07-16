@@ -15,9 +15,9 @@ export class HomeComponent implements OnInit {
 
   studentList: student[] = [
     { name: 'Guilherme', age: '30', email: 'guilherme@gmail.com', course: 'Computer Cience'},
-    { name: 'Guilherme', age: '30', email: 'guilherme@gmail.com', course: 'Computer Cience'},
-    { name: 'Guilherme', age: '30', email: 'guilherme@gmail.com', course: 'Computer Cience'},
-    { name: 'Guilherme', age: '30', email: 'guilherme@gmail.com', course: 'Computer Cience'}
+    { name: 'Gabriel', age: '30', email: 'gabriel@gmail.com', course: 'Analise e Desenvolvimento de Sistemas'},
+    { name: 'Dielen', age: '27', email: 'dielen@gmail.com', course: 'Logistica'},
+    { name: 'Tania', age: '49', email: 'tania@gmail.com', course: 'Pedagogia'}
   ];
 
   displayedColums: string[] = ['Nome', 'Idade', 'Email', 'Curso'];
