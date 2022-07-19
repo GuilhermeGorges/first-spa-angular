@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { student } from '../model/student';
+import { AlunosService } from '../service/alunos.service';
 
 @Component({
   selector: 'spa-home',
@@ -8,22 +9,18 @@ import { student } from '../model/student';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private alunosService: AlunosService) { }
 
   value!: number;
   showTable: boolean = false;
 
-  studentList: student[] = [
-    { name: 'Guilherme', age: 30, email: 'guilherme@gmail.com', course: 'Computer Cience'},
-    { name: 'Gabriel', age: 30, email: 'gabriel@gmail.com', course: 'Analise e Desenvolvimento de Sistemas'},
-    { name: 'Dielen', age: 27, email: 'dielen@gmail.com', course: 'Logistica'},
-    { name: 'Tania', age: 49, email: 'tania@gmail.com', course: 'Pedagogia'}
-  ];
+  studentList!: student[];
 
   displayedColums: string[] = ['Nome', 'Idade', 'Email', 'Curso'];
 
   ngOnInit(): void {
     this.value = 5;
+    this.getStudent();
   }
 
   changeValue(){
@@ -36,6 +33,12 @@ export class HomeComponent implements OnInit {
 
   getTable(){
     this.showTable = true;
+  }
+
+  private getStudent() {
+    this.alunosService.getStudent().subscribe(student => {
+      this.studentList.push(student);
+    });
   }
 
 }

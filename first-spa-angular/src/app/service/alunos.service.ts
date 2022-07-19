@@ -8,22 +8,25 @@ export class AlunosService {
 
   constructor() { }
 
-  getStudent():Observable<any> {
+  getStudent(): Observable<any> {
     let studentArray = [
       {
         firstName: 'Guilherme',
-        lastName: 'Gabriel',
-        age: 29
+        age: 29,
+        email: 'guilherme@gmail.com',
+        course: 'Computer Cience'
       },
       {
         firstName: 'Luis',
-        lastName: 'Carlos',
-        age: 58
+        age: 58,
+        email: 'luis@gmail.com',
+        course: 'Analise e Desenvolvimento de Sistemas'
       },
       {
         firstName: 'Tania',
-        lastName: 'Regina',
-        age: 49
+        age: 49,
+        email: 'tania@gmail.com',
+        course: 'Pedagogia'
       },
     ];
 
