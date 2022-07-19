@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AlunosComponent } from './alunos/alunos.component';
 import { ProfessoresComponent } from './professores/professores.component';
+import { AlunosService } from './service/alunos.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { ProfessoresComponent } from './professores/professores.component';
     MatTabsModule,
     MatTableModule
   ],
-  providers: [],
+  providers: [AlunosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
