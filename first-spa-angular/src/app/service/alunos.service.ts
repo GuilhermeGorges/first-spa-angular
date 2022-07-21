@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { student } from '../model/student';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class AlunosService {
 
   constructor() { }
 
-  getStudent(): Observable<any> {
+  getStudent(): Observable<student[]> {
     let studentArray = [
       {
         firstName: 'Guilherme',

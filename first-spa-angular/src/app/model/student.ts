@@ -1,5 +1,5 @@
 export class student {
-    name!: string;
+    firstName!: string;
     age!: number;
     email!: string;
     course!: string;

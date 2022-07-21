@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { student } from '../model/student';
 import { AlunosService } from '../service/alunos.service';
 
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   value!: number;
   showTable: boolean = false;
 
-  studentList!: student[];
+  studentList: student[] = [];
 
   displayedColums: string[] = ['Nome', 'Idade', 'Email', 'Curso'];
 
@@ -36,8 +37,10 @@ export class HomeComponent implements OnInit {
   }
 
   private getStudent() {
-    this.alunosService.getStudent().subscribe(student => {
-      this.studentList.push(student);
+    this.alunosService.getStudent().subscribe(studentArray => {
+      studentArray.forEach(stu => {
+       this.studentList.push(stu);
+      })
     });
   }
 
